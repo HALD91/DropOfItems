@@ -43,12 +43,7 @@ public class DiamondTools implements Listener {
                 itemType == Material.ARROW ||
                 (itemType == Material.GOLDEN_APPLE && itemStack.getDurability() == 0)) &&
                 itemStack.getEnchantments().isEmpty()){
-            event.getPlayer().sendMessage("True");
-            //event.setCancelled(true);
             item.remove();
-        } else {
-            event.getPlayer().sendMessage("False");
-            event.getPlayer().sendMessage(String.valueOf(itemType));
         }
     }
 }
